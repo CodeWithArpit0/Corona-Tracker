@@ -1,0 +1,25 @@
+#travel-header{
+    padding-left: 7em;
+
+    #heading-box{
+        @include volume(69%, auto);
+    }
+}
+
+
+.travel-heading{
+    color: var(--primary-color);
+    border-left: 8px solid var(--secondry-color);
+    padding-left: 1em;
+    font-size: 3.4em;
+    text-transform:capitalize;
+}
+
+.travel-sub-heading{
+    color: #fff;
+    background-color: var(--primary-color);
+    border-right: 8px solid var(--secondry-color);
+    margin-top: 1em;
+    padding-left: 2em;
+    text-transform:capitalize;
+}

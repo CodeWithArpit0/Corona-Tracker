@@ -1,0 +1,90 @@
+@import url("https://fonts.googleapis.com/css2?family=Signika+Negative:wght@300;400&display=swap");
+
+// ** Importing Other CSS **
+@import "mixins";
+
+// ** Importing scroll button CSS **
+@import "scroll_btn";
+
+// ** Importing Navbar CSS **
+@import "navbar";
+
+// ** Importing Home page CSS **
+@import "home/home";
+
+// ** Importing What is Covid-19? page CSS **
+@import "covid/covid";
+
+// ** Importing "Prevention" page CSS **
+@import "prevention/prevention";
+
+// ** Importing "Travel Alert" page CSS **
+@import "travel/travel";
+
+// ** Color Variables
+:root {
+  --primary-color: #a64ac9;
+  --secondry-color: #fccd04;
+  --text-color: #000;
+  // --text-color: #fff;
+}
+
+::selection {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  // font-size: 63.5%;
+  font-family: "Signika Negative", sans-serif;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+header{
+  margin-top: 8em;
+}
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  // background: #ffd628;
+  background: #a64ac9;
+  border-radius: 30px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+  justify-content: space-between;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// Colors
+
+// #a64ac9 Lite Purple
+// #fccd04 Lite Yellow
+// #ffb48f Skin Color
+// #17e9e0 Sky Color
+// #f5e6cc Lite Skin

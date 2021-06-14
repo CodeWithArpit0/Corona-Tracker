@@ -1,0 +1,145 @@
+// ****************** Navbar CSS ******************
+#navigation-bar {
+  @include volume(100%, 8em);
+  justify-content: space-between;
+
+  #logo-box {
+    @include volume(18em, unset);
+    justify-content: space-between;
+    margin-left: 8em;
+
+    #logo-image {
+      border-radius: 150px;
+      background: #a64ac9;
+      box-shadow: 8px 8px 16px #6f3287, -8px -8px 16px #dd62ff;
+
+      background-color: var(--primary-color);
+      padding: 4px;
+      animation: morph 8s ease-in-out infinite;
+      transition: all 1s ease-in-out;
+      z-index: 5;
+    }
+
+    @keyframes morph {
+      0% {
+        border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+      }
+
+      50% {
+        border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+      }
+
+      100% {
+        border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+      }
+    }
+
+    #logo {
+      @include volume(4em, 4em);
+    }
+
+    #primary-heading {
+      padding: 0 1.8em 0 0.5em;
+      border: 2px solid var(--secondry-color);
+    }
+    #secondry-heading {
+      display: inline-flex;
+      margin-top: 2px;
+      padding: 0 1.8em 0 0.8em;
+      font-size: 1.5em;
+      font-weight: bold;
+      background-color: #fccd04;
+    }
+    #primary-heading,
+    #secondry-heading {
+      color: #fff;
+    }
+  }
+
+  #nav-bar {
+    @include volume(unset, 3em);
+    padding: 1em;
+    position: relative;
+    background: linear-gradient(180deg, #a64ac9 92%, #fccd04 8%);
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 70px;
+
+    ul {
+      @include volume(38em, unset);
+      justify-content: space-between;
+      padding: 0 2em;
+      .nav-link {
+        position: relative;
+        font-size: 1.1em;
+        font-weight: bold;
+        color: #fff;
+
+        &::before {
+          content: " ";
+          top: -120%;
+          left: 50%;
+          height: 6px;
+          width: 6px;
+          background: var(--secondry-color);
+          border-radius: 40px;
+          transition: all 0.4s ease-in-out;
+          box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.4);
+        }
+
+        &:hover::before {
+          position: absolute;
+          top: -20%;
+        }
+      }
+
+      .active::before {
+        position: absolute;
+        top: -20%;
+      }
+
+      a {
+        text-decoration: none;
+        color: var(--text-color);
+        font-weight: bold;
+      }
+    }
+  }
+
+  #social-links {
+    @include volume(8em, unset);
+    background: #a64ac9;
+    border-radius: 50px;
+    padding-top: 20px 0;
+    justify-content: space-around;
+
+    a {
+      text-decoration: none;
+      font-size: 1.1em;
+      color: #fff;
+      transition: all 0.2s ease-in-out;
+
+      &:hover {
+        color: #fff;
+      }
+    }
+  }
+}
+
+// ****************** Navbar CSS ******************
+
+// ****************** Background Bubble CSS ******************
+
+.bubble {
+  position: absolute;
+}
+.bubble-1 {
+  top: -7em;
+  left: -1em;
+  height: 20em;
+  width: 40%;
+  border-radius: 47% 53% 65% 35% / 44% 9% 91% 56%;
+  background-color: var(--primary-color);
+  z-index: -2;
+}
+
+// ****************** Background Bubble CSS ******************
