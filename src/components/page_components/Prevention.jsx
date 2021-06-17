@@ -1,4 +1,4 @@
-import logo from "../../images/logo.png";
+import logo from "../../images/home/logo.png";
 import faceTouch from "../../images/prevention/touch-face.png";
 import handWash from "../../images/prevention/handwash.png";
 import handShake from "../../images/prevention/hand-shake.png";
