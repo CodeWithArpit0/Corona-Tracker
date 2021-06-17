@@ -13,7 +13,15 @@ const CRD = (props) => {
 
   const showCountries = () => {
     const countryBox = document.getElementById("country-list");
-    countryBox.style.display = "block";
+    if (countryBox.className === "collapse") {
+      countryBox.style.display = "block";
+      countryBox.removeAttribute("class");
+      countryBox.setAttribute("class", "toggle");
+    } else if (countryBox.className === "toggle") {
+      countryBox.style.display = "none";
+      countryBox.removeAttribute("class");
+      countryBox.setAttribute("class", "collapse");
+    }
   };
 
   // A utility function to add the commas in the number
@@ -72,7 +80,7 @@ const CRD = (props) => {
           </h1>
         </div>
         <div className="flex" id="cards-container">
-          <div className="flex" id="contry-select-container">
+          <div className="flex" id="control-card">
             {/*Live Card*/}
             <div id="live">
               <LiveIcon />

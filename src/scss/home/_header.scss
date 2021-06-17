@@ -1,27 +1,26 @@
 // ****************** Landing Page CSS ******************
 #header {
   @include volume(100%, 30em);
+  margin-top: 3em;
   justify-content: space-between;
-  margin-top: 4em;
   #heading-box {
+    width: 60%;
     font-size: 1rem;
-    border-left: 1em outset var(--secondry-color);
-    padding-left:2em;
+    border-left: 10px outset var(--secondry-color);
+    padding-left: 2em;
     margin-left: 4em;
-
     #covid-status-heading {
       color: var(--text-color);
-      font-size: 1.1em;
-      span{
-          color: var(--primary-color);        
-      }
+      font-size: 5.6em;
+      color: var(--primary-color);
     }
-
+    p {
+      font-size: 1.5em;
+    }
   }
 
   #global-status-container {
     @include volume(18em, unset);
-    border-radius: 8px;
     margin-right: 6em;
     padding: 4em 0;
 
@@ -35,17 +34,8 @@
       flex-direction: column;
 
       #head,
-      #corona-status,
-      #loaderBox {
+      #corona-status {
         width: 100%;
-      }
-
-      #coronaStatus {
-        display: none;
-      }
-
-      #loaderBox {
-        padding: 4px 0;
       }
     }
   }
@@ -63,7 +53,7 @@
   transition: all 1s ease-in-out;
 }
 
-@keyframes updown{
+@keyframes updown {
   0% {
     top: 36%;
   }
@@ -75,7 +65,7 @@
   }
 }
 
-#explore-btn{
+#explore-btn {
   position: absolute;
   top: 87%;
   left: 50%;
@@ -88,7 +78,7 @@
   text-decoration: none;
 }
 
-#explore-btn::before{
+#explore-btn::before {
   content: "";
   position: absolute;
   top: 0;
@@ -100,10 +90,51 @@
   z-index: -1;
 }
 
-#explore-btn:hover::before{
+#explore-btn:hover::before {
   height: 100%;
 }
 
-#explore-btn:hover{
+#explore-btn:hover {
   color: #fff;
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  /* Styles */
+  #header {
+    #heading-box {
+      padding-left: 1em;
+      font-size: 0.8rem;
+      width: 62%;
+      margin-left: 2em;
+    }
+
+    #global-status-container {
+      width: 25%;
+      margin-right: 2em;
+      #content-box {
+        font-size: 1em;
+        padding: 4px 6px;
+      }
+    }
+  }
+
+  .bubble-2 {
+    top: 25%;
+  }
+  @keyframes updown {
+    0% {
+      top: 25%;
+    }
+    50% {
+      top: 27%;
+    }
+    100% {
+      top: 25%;
+    }
+  }
+
+  #explore-btn{
+    display: none;
+  }
 }

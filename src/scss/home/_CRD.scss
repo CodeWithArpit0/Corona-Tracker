@@ -1,5 +1,5 @@
 #all-cases-section {
-  @include volume(100%, 28em);
+  @include volume(100%, auto);
   background: #fff;
   padding: 1em;
   flex-direction: column;
@@ -8,7 +8,7 @@
   #heading-container {
     text-align: center;
   }
-  
+
   #main-heading {
     color: var(--secondry-color);
   }
@@ -18,7 +18,7 @@
     padding: 1em;
     justify-content: space-between;
 
-    #contry-select-container {
+    #control-card {
       @include volume(19em, 10em);
       padding: 1.1em 1em;
       box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
@@ -162,6 +162,38 @@
 
         #head {
           height: calc(25%);
+        }
+      }
+    }
+  }
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  /* Styles */
+
+  #all-cases-section {
+    padding-top: 4em;
+
+    #cards-container {
+      flex-direction: column;
+      margin-top: 2em;
+      #control-card {
+        @include volume(26em, 12em);
+        padding: 1.5em 1.3em;
+
+        #country-list {
+          width: 23em;
+        }
+      }
+
+      #case-container {
+        flex-direction: column;
+        margin-top: 3em;
+        .card {
+          @include volume(26em, 12em);
+          margin-top: 1em;
+          padding: 0 1.3em;
         }
       }
     }

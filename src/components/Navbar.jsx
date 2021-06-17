@@ -9,51 +9,73 @@ import Analytics from "./page_components/Analytics";
 import About from "./page_components/About";
 
 // Covid logo path
-import Path from "../images/logo.png"
+import Path from "../images/logo.png";
 
 // Importing scroll top button
 import ScrollBtn from "../components/scroll_btn";
 
+// Importing Hamburger icon
+import MenuIcon from "@material-ui/icons/Menu";
+
 // Navbar Module
 const Navbar = () => {
+  // Funtion to toggle the Nav
+  function showNav() {
+    let nav = document.getElementById("nav-bar");
+    if (nav.className === "collapse") {
+      nav.style.display = "block";
+      nav.removeAttribute("class");
+      nav.setAttribute("class", "toggle");
+    } else if (nav.className === "toggle") {
+      nav.style.display = "none";
+      nav.removeAttribute("class");
+      nav.setAttribute("class", "collapse");
+    }
+  }
   return (
     <>
-    <ScrollBtn/>
-    <div className="bubble-1 bubble"></div>
+      <ScrollBtn />
+      <div id="menu">
+        <MenuIcon id="menu-btn" onClick={showNav} />
+      </div>
+      <div className="bubble-1 bubble"></div>
 
       <div id="navigation-bar" className="flex">
         <div id="logo-box" className="flex">
-        <div id="logo-image">
-          <img src={Path} alt="covid logo" id="logo" />
+          <div id="logo-image">
+            <img src={Path} alt="covid logo" id="logo" />
           </div>
           <div id="logo-heading">
             <h1 id="primary-heading">Covid-19</h1>
-            <h2 id="secondry-heading">
-              Tracker
-            </h2>
+            <h2 id="secondry-heading">Tracker</h2>
           </div>
         </div>
 
-        <div id="nav-bar" className="flex">
+        <div id="nav-bar" className="collapse">
           <nav>
             <ul className="flex">
               <li>
-                <NavLink exact activeClassName="active" className="nav-link"  to="/">
+                <NavLink
+                  exact
+                  activeClassName="active"
+                  className="nav-link"
+                  to="/"
+                >
                   Home
                 </NavLink>
               </li>
-             {/* <li>
+              {/* <li>
                 <NavLink exact className="nav-link"  to="/travelalert">
                   Travel Alert
                 </NavLink>
               </li>*/}
               <li>
-                <NavLink exact className="nav-link"  to="/covid">
+                <NavLink exact className="nav-link" to="/covid">
                   What is Covid-19?
                 </NavLink>
               </li>
               <li>
-                <NavLink exact className="nav-link"  to="/prevention">
+                <NavLink exact className="nav-link" to="/prevention">
                   Prevention
                 </NavLink>
               </li>
@@ -73,7 +95,7 @@ const Navbar = () => {
       </div>
 
       <Switch>
-      <Route exact path="/" component={Home} />
+        <Route exact path="/" component={Home} />
         <Route exact path="/travelalert" component={Travelalert} />
         <Route exact path="/covid" component={Covid} />
         <Route exact path="/prevention" component={Prevention} />
