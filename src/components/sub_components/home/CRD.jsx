@@ -71,7 +71,7 @@ const CRD = (props) => {
         <div id="heading-container">
           {/*Section's main heading*/}
           <h1>
-            <span style={{ fontSize: 2.4 + "em" }}>See Covid-19</span>
+            <span style={{ fontSize: 2.6 + "em" }}>See Covid-19</span>
             <br />
             <span id="main-heading">
               <q>Confirmed, Recoverd and Death</q>

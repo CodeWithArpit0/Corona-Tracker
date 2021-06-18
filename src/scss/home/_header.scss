@@ -5,7 +5,6 @@
   justify-content: space-between;
   #heading-box {
     width: 60%;
-    font-size: 1rem;
     border-left: 10px outset var(--secondry-color);
     padding-left: 2em;
     margin-left: 4em;
@@ -45,7 +44,7 @@
   top: 45%;
   left: 65%;
   height: 20em;
-  width: 35%;
+  width: 28em;
   border-radius: 24% 76% 75% 25% / 35% 51% 49% 65%;
   background-color: var(--secondry-color);
   z-index: -2;
@@ -98,43 +97,127 @@
   color: #fff;
 }
 
+@media (max-width: 1160px) {
+  #header {
+    #heading-box {
+      width: 45%;
+      #covid-status-heading {
+        font-size: 5em;
+      }
+      p {
+        font-size: 1.3em;
+      }
+    }
+  }
+  .bubble-2 {
+    left: 60%;
+    height: 18em;
+    width: 24em;
+  }
+}
+
+@media (max-width: 1045px) {
+  #header {
+    #heading-box {
+      width: 50%;
+      margin-left: 1em;
+      #covid-status-heading {
+        font-size: 4.5em;
+      }
+      p {
+        font-size: 1em;
+      }
+    }
+
+    #global-status-container {
+      margin-right: 3em;
+    }
+  }
+
+  @keyframes updown {
+    0% {
+      top: 42%;
+    }
+    50% {
+      top: 45%;
+    }
+    100% {
+      top: 42%;
+    }
+  }
+}
+
+@media (max-width: 870px) {
+  .bubble-2 {
+    height: 16em;
+    width: 20em;
+  }
+  #header {
+    #heading-box {
+      width: 50%;
+      margin-left: 1em;
+      #covid-status-heading {
+        font-size: 4em;
+      }
+      p {
+        font-size: 1em;
+      }
+    }
+
+    #global-status-container {
+      margin-right: 0;
+      #content-box {
+        font-size: 1em;
+        width: 80%;
+      }
+    }
+  }
+}
 /* iPads (portrait and landscape) ----------- */
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+@media (max-width: 768px) and (max-height: 1024px) {
   /* Styles */
   #header {
     #heading-box {
       padding-left: 1em;
       font-size: 0.8rem;
-      width: 62%;
-      margin-left: 2em;
-    }
+      width: 58%;
+      margin-left: 1em;
 
+      #covid-status-heading {
+        font-size: 5em;
+      }
+
+      p{
+          font-size: 1.3em;
+      }
+    }
     #global-status-container {
-      width: 25%;
-      margin-right: 2em;
+      width: 35%;
       #content-box {
         font-size: 1em;
-        padding: 4px 6px;
+        padding: unset 8px;
       }
     }
   }
 
   .bubble-2 {
-    top: 25%;
+    height: 15em;
+    width: 18em;
+    top: 40%;
   }
   @keyframes updown {
     0% {
-      top: 25%;
+      top: 40%;
     }
     50% {
-      top: 27%;
+      top: 42%;
     }
     100% {
-      top: 25%;
+      top: 40%;
     }
   }
 
-  #explore-btn{
+  #explore-btn {
     display: none;
   }
 }

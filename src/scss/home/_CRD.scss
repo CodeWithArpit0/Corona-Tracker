@@ -7,6 +7,8 @@
 
   #heading-container {
     text-align: center;
+    margin-top: 3em;
+
   }
 
   #main-heading {
@@ -17,7 +19,7 @@
     @include volume(100%, unset);
     padding: 1em;
     justify-content: space-between;
-
+    margin: 3em 0;
     #control-card {
       @include volume(19em, 10em);
       padding: 1.1em 1em;
@@ -45,7 +47,7 @@
       }
 
       h2 {
-        font-size: 2em;
+        font-size: 2.2em;
       }
       .icon {
         color: #fff;
@@ -190,6 +192,7 @@
       #case-container {
         flex-direction: column;
         margin-top: 3em;
+
         .card {
           @include volume(26em, 12em);
           margin-top: 1em;
@@ -198,4 +201,14 @@
       }
     }
   }
+}
+
+/* iPads (landscape) ----------- */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+  /* Styles */
+  
+}
+
+/* iPads (portrait) ----------- */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
 }
