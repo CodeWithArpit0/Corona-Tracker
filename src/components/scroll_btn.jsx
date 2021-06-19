@@ -1,5 +1,6 @@
 import TopArrow from "@material-ui/icons/ExpandLess";
-
+// Importing animations
+import Bounce from "react-reveal/Bounce";
 const scrollBtn = () => {
   // When the user scrolls down 20px from the top of the document, show the button
   window.onscroll = function () {
@@ -28,9 +29,11 @@ const scrollBtn = () => {
 
   return (
     <>
-      <button onClick={topFunction} id="myBtn" title="Go to top">
-        <TopArrow />
-      </button>
+      <Bounce right>
+        <button onClick={topFunction} id="myBtn" title="Go to top">
+          <TopArrow />
+        </button>
+      </Bounce>
     </>
   );
 };

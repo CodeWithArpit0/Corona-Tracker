@@ -2,6 +2,9 @@ import LiveIcon from "@material-ui/icons/LiveTvOutlined";
 import Globe from "@material-ui/icons/LanguageOutlined";
 import DownArrow from "@material-ui/icons/ExpandMoreOutlined";
 
+// Importing animations
+import Fade from "react-reveal/Fade";
+
 // Importing Card
 import Card from "./Card";
 
@@ -68,106 +71,111 @@ const CRD = (props) => {
   return (
     <>
       <section className="flex" id="all-cases-section">
-        <div id="heading-container">
-          {/*Section's main heading*/}
-          <h1>
-            <span style={{ fontSize: 2.6 + "em" }}>See Covid-19</span>
-            <br />
-            <span id="main-heading">
-              <q>Confirmed, Recoverd and Death</q>
-            </span>
-            cases all over the world
-          </h1>
-        </div>
-        <div className="flex" id="cards-container">
-          <div className="flex" id="control-card">
-            {/*Live Card*/}
-            <div id="live">
-              <LiveIcon />
-              <span
-                style={{
-                  color: "red",
-                  marginLeft: 6 + "px",
-                  fontWeight: "bold",
-                }}
-              >
-                Live
+        <Fade left>
+          <div id="heading-container">
+            {/*Section's main heading*/}
+            <h1>
+              <span style={{ fontSize: 2.6 + "em" }}>See Covid-19</span>
+              <br />
+              <span id="main-heading">
+                <q>Confirmed, Recoverd and Death</q>
               </span>
-            </div>
-            <div id="stats-heading">
-              <h2>Stats Overview</h2>
-            </div>
-            <div id="country-btn">
-              {/*Show country button*/}
-              <button
-                className="flex"
-                id="country-btn"
-                title="country-button"
-                onClick={showCountries}
-              >
-                <Globe className="icon" />
-                <label id="country-label">Global</label>
-                <DownArrow className="icon" />
-              </button>
+              cases all over the world
+            </h1>
+          </div>
+        </Fade>
 
-              <div id="country-list" className="collapse">
-                {/*Country list*/}
-                <ul>
-                  <li>
-                    <button
-                      onClick={(e) => getCases(e.target.name)}
-                      className="countryBtn"
-                      value="Global"
-                      title="Global"
-                      name="00"
-                    >
-                      Global
-                    </button>
-                  </li>
+        <Fade right>
+          <div className="flex" id="cards-container">
+            <div className="flex" id="control-card">
+              {/*Live Card*/}
+              <div id="live">
+                <LiveIcon />
+                <span
+                  style={{
+                    color: "red",
+                    marginLeft: 6 + "px",
+                    fontWeight: "bold",
+                  }}
+                >
+                  Live
+                </span>
+              </div>
+              <div id="stats-heading">
+                <h2>Stats Overview</h2>
+              </div>
+              <div id="country-btn">
+                {/*Show country button*/}
+                <button
+                  className="flex"
+                  id="country-btn"
+                  title="country-button"
+                  onClick={showCountries}
+                >
+                  <Globe className="icon" />
+                  <label id="country-label">Global</label>
+                  <DownArrow className="icon" />
+                </button>
 
-                  {/* Inserting the country name and their other details */}
-                  {props.covidData.data.Countries.map(function (
-                    currentValue,
-                    index
-                  ) {
-                    return (
-                      <li key={index}>
-                        <button
-                          onClick={(e) => getCases(e.target.name)}
-                          className="countryBtn"
-                          value={currentValue.Country}
-                          title={currentValue.Country}
-                          name={index}
-                        >
-                          {currentValue.Country}
-                        </button>
-                      </li>
-                    );
-                  })}
-                </ul>
+                <div id="country-list" className="collapse">
+                  {/*Country list*/}
+                  <ul>
+                    <li>
+                      <button
+                        onClick={(e) => getCases(e.target.name)}
+                        className="countryBtn"
+                        value="Global"
+                        title="Global"
+                        name="00"
+                      >
+                        Global
+                      </button>
+                    </li>
+
+                    {/* Inserting the country name and their other details */}
+                    {props.covidData.data.Countries.map(function (
+                      currentValue,
+                      index
+                    ) {
+                      return (
+                        <li key={index}>
+                          <button
+                            onClick={(e) => getCases(e.target.name)}
+                            className="countryBtn"
+                            value={currentValue.Country}
+                            title={currentValue.Country}
+                            name={index}
+                          >
+                            {currentValue.Country}
+                          </button>
+                        </li>
+                      );
+                    })}
+                  </ul>
+                </div>
               </div>
             </div>
-          </div>
 
-          {/*Cards*/}
-          <div className="flex" id="case-container">
-            <Card
-              caseId="confirm-case"
-              cases={numberWithCommas(confirmCases)}
-              caseType="Confirmed"
-            />
-            <Card
-              caseId="recovered-case"
-              cases={numberWithCommas(recoveredCases)}
-              caseType="Recovered"
-            />
-            <Card
-              caseId="death-case"
-              cases={numberWithCommas(deathCases)}
-              caseType="Death"
-            />
+            {/*Cards*/}
+            <div className="flex" id="case-container">
+              <Card
+                caseId="confirm-case"
+                cases={numberWithCommas(confirmCases)}
+                caseType="Confirmed"
+              />
+              <Card
+                caseId="recovered-case"
+                cases={numberWithCommas(recoveredCases)}
+                caseType="Recovered"
+              />
+              <Card
+                caseId="death-case"
+                cases={numberWithCommas(deathCases)}
+                caseType="Death"
+              />
+            </div>
           </div>
-        </div>
+        </Fade>
       </section>
     </>
   );

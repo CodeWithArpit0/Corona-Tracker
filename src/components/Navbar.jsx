@@ -34,7 +34,7 @@ const Navbar = () => {
   }
   return (
     <>
-      <ScrollBtn />
+        <ScrollBtn />
       <div id="menu">
         <MenuIcon id="menu-btn" onClick={showNav} />
       </div>
