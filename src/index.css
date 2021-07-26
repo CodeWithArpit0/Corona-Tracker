@@ -1377,6 +1377,76 @@ a:hover {
   text-transform: capitalize;
 }
 
+#loaderBox {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+#loaderBox h3 {
+  margin-top: .6em;
+  font-size: 1.4em;
+  color: var(--primary-color);
+}
+
+#loaderBox .loader {
+  width: 100px;
+  height: 100px;
+  margin: auto;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 50%;
+  position: relative;
+  -webkit-animation: a1 2s linear infinite;
+          animation: a1 2s linear infinite;
+}
+
+#loaderBox .loader::before,
+#loaderBox .loader::after {
+  content: "";
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  left: 0;
+  top: -8px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 50%;
+}
+
+#loaderBox #yellow {
+  border-top: 10px solid var(--secondry-color);
+}
+
+#loaderBox #yellow::before {
+  border-top: 10px solid var(--secondry-color);
+  -webkit-transform: rotate(120deg);
+          transform: rotate(120deg);
+}
+
+#loaderBox #yellow::after {
+  border-top: 10px solid var(--secondry-color);
+  -webkit-transform: rotate(240deg);
+          transform: rotate(240deg);
+}
+
+@-webkit-keyframes a1 {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes a1 {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
 :root {
   --primary-color: #a64ac9;
   --secondry-color: #fccd04;

@@ -1,0 +1,55 @@
+#loaderBox {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+text-align: center;
+
+h3{
+  margin-top: .6em;
+  font-size: 1.4em;
+  color: var(--primary-color);
+}
+
+  .loader {
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    box-sizing: border-box;
+    border-radius: 50%;
+    position: relative;
+    animation: a1 2s linear infinite;
+  }
+
+  .loader::before,
+  .loader::after {
+    content: "";
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    left: 0;
+    top: -8px;
+    box-sizing: border-box;
+    border-radius: 50%;
+  }
+
+  #yellow {
+    border-top: 10px solid var(--secondry-color);
+  }
+  
+  #yellow::before {
+    border-top: 10px solid var(--secondry-color);
+    transform: rotate(120deg);
+  }
+  
+  #yellow::after {
+    border-top: 10px solid var(--secondry-color);
+    transform: rotate(240deg);
+  }
+  
+  @keyframes a1 {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+}
