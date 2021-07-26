@@ -1,8 +1,6 @@
 import logo from "../../images/home/logo.png";
-import cardOneImage from "../../images/covid/ps.png";
-import cardSecondImage from "../../images/covid/symptom.jpg";
-import cardThirdImage from "../../images/covid/vaccine.jpg";
 import svgPath from "../../images/covid/check.svg";
+import Footer from "../sub_components/footer/footer";
 
 // Importing animations
 import Slide from "react-reveal/Slide";
@@ -11,44 +9,42 @@ import Fade from "react-reveal/Fade";
 const covid = () => {
   return (
     <>
-      <header>
-        <div id="covid-header" className="flex">
-          <div id="content-box">
-            <Slide left>
-              <div id="covid-heading-box">
-                <h1 id="covid-heading">
-                  What is&nbsp;
-                  <span>
-                    C<img src={logo} alt="logo" />
-                    vid-19
-                  </span>
-                </h1>
-              </div>
-              <div id="content">
-                <p>
-                  Coronavirus disease (COVID-19) is an infectious disease caused
-                  by a newly discovered coronavirus.
-                  <br />
-                  <br />
-                  Most people infected with the COVID-19 virus will experience
-                  mild to moderate respiratory illness and recover without
-                  requiring special treatment. Older people, and those with
-                  underlying medical problems like cardiovascular disease,
-                  diabetes, chronic respiratory disease, and cancer are more
-                  likely to develop serious illness.
-                  <br />
-                  <br />
-                  The best way to prevent and slow down transmission is to be
-                  well informed about the COVID-19 virus, the disease it causes
-                  and how it spreads. Protect yourself and others from infection
-                  by washing your hands or using an alcohol based rub frequently
-                  and not touching your face.
-                </p>
-              </div>
-            </Slide>
-          </div>
+      <div id="covid-header" className="flex">
+        <div id="content-box">
+          <Slide left>
+            <div id="covid-heading-box">
+              <h1 id="covid-heading">
+                What is&nbsp;
+                <span>
+                  C<img src={logo} alt="logo" />
+                  vid-19
+                </span>
+              </h1>
+            </div>
+            <div id="content">
+              <p>
+                Coronavirus disease (COVID-19) is an infectious disease caused
+                by a newly discovered coronavirus.
+                <br />
+                <br />
+                Most people infected with the COVID-19 virus will experience
+                mild to moderate respiratory illness and recover without
+                requiring special treatment. Older people, and those with
+                underlying medical problems like cardiovascular disease,
+                diabetes, chronic respiratory disease, and cancer are more
+                likely to develop serious illness.
+                <br />
+                <br />
+                The best way to prevent and slow down transmission is to be well
+                informed about the COVID-19 virus, the disease it causes and how
+                it spreads. Protect yourself and others from infection by
+                washing your hands or using an alcohol based rub frequently and
+                not touching your face.
+              </p>
+            </div>
+          </Slide>
         </div>
-      </header>
+      </div>
 
       <section id="youtube-video" className="flex">
         <Fade>
@@ -424,78 +420,7 @@ const covid = () => {
         </Slide>
       </section>
 
-      <Slide bottom>
-        <section id="related-section" className="flex">
-          <div>
-            <h1 id="related-heading">Related</h1>
-          </div>
-
-          <div id="card-container" className="flex">
-            <a
-              href="https://www.hopkinsmedicine.org/health/patient-safety-infographic"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <div className="related-card flex">
-                <div className="image-container">
-                  <img
-                    src={cardOneImage}
-                    alt="Patient safety"
-                    className="card-image"
-                    id="cardOneImage"
-                  />
-                </div>
-                <div className="card-heading">
-                  <h1>Patient Safety Infographic</h1>
-                </div>
-              </div>
-            </a>
-
-            <a
-              href="https://www.hopkinsmedicine.org/health/conditions-and-diseases/coronavirus/coronavirus-symptoms-frequently-asked-questions"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <div className="related-card flex">
-                <div className="image-container">
-                  <img
-                    src={cardSecondImage}
-                    alt="Coronavirus Symptoms"
-                    className="card-image"
-                    id="cardSecondImage"
-                  />
-                </div>
-                <div className="card-heading">
-                  <h1>Coronavirus Symptoms: Frequently Asked Questions</h1>
-                </div>
-              </div>
-            </a>
-
-            <a
-              href="https://www.hopkinsmedicine.org/health/conditions-and-diseases/coronavirus/covid19-vaccine-can-it-affect-your-mammogram-results"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <div className="related-card flex">
-                <div className="image-container">
-                  <img
-                    src={cardThirdImage}
-                    alt="Vaccince"
-                    className="card-image"
-                    id="cardThirdImage"
-                  />
-                </div>
-                <div className="card-heading">
-                  <h1>
-                    Covid-19 Vaccine : Can It Affect Your Mammogram Results?
-                  </h1>
-                </div>
-              </div>
-            </a>
-          </div>
-        </section>
-      </Slide>
-      <footer></footer>
+      <Footer />
     </>
   );
 };

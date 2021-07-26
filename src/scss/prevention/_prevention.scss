@@ -4,11 +4,11 @@
 
   #prevent-heading {
     color: var(--primary-color);
-    font-size: 3.5em;
+    font-size: 3em;
     border-left: 10px solid var(--secondry-color);
     padding-left: 1em;
-    margin-top: 2.6em;
-    margin-left: 2em;
+    margin-top: 1.5em;
+    margin-left: 1em;
   }
 
   #sub-heading {
@@ -48,7 +48,8 @@
     .tip {
       margin: 2em 0;
       .tip-content {
-        @include volume(100%, 18em);
+        @include volume(100%, unset);
+        min-height: 18em;
         padding: 2em 3em;
 
         p {
@@ -83,7 +84,7 @@
   flex-direction: column;
 }
 .headline {
-  @include volume(70%, auto);
+  @include volume(80%, auto);
   padding: 2em;
   color: var(--primary-color);
   font-size: 1.29em;
@@ -94,16 +95,12 @@
 }
 
 .prevent-heading {
+  margin: 1.5em 0;
+  font-size: 2.3em;
+  width: 80%;
   color: var(--primary-color);
-  font-size: 3.5em;
   border-left: 10px solid var(--secondry-color);
   padding-left: 1em;
-}
-
-#steps-heading {
-  margin: 1.5em 0;
-  font-size: 2.5em;
-  width: 75%;
 }
 
 #importance {
@@ -137,6 +134,7 @@
 
 #when_to_call_your_doctor {
   padding: 0 6em;
+  padding-bottom: 4em;
   margin-top: 5em;
   #doctor-heading {
     font-size: 2.5em;

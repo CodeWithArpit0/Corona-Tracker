@@ -12,7 +12,7 @@ const CEC = (props) => {
     <>
       <section className="flex" id="all-country-live-cases-section">
         <Fade left>
-          <div className="flex" id="full-case-list-heading">
+          <div id="full-case-list-heading">
             <h1 id="bg-heading">Covid-19</h1>
             <div className="flex" id="heading-container">
               <h1>
@@ -24,13 +24,13 @@ const CEC = (props) => {
         </Fade>
 
         <Fade right>
-          <div id="full-case-list-table">
+          <div id="full-case-list-table" className="">
             <img
               src={tableBackgroundImage}
               alt="table background"
               id="table-bg"
             />
-            <table id="case-table">
+            <table>
               <thead>
                 <tr id="table-header">
                   <th>Countries</th>

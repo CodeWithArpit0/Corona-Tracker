@@ -51,7 +51,7 @@ const Navbar = () => {
           </div>
         </div>
 
-        <div id="nav-bar" className="collapse">
+        <div id="nav-bar" className="collapse flex">
           <nav>
             <ul className="flex">
               <li>

@@ -8,33 +8,33 @@ import clean from "../../images/prevention/clean.png";
 import distance from "../../images/prevention/distance.jpg";
 import group from "../../images/prevention/group.png";
 import mask from "../../images/prevention/mask.png";
+import cardsFooter from "../sub_components/footer/footer";
+
+import Footer from "../sub_components/footer/footer";
 
 const prevention = () => {
   return (
     <>
-      <header>
-        <div id="prevent-header">
-          <div id="heading-box">
-            <h1 id="prevent-heading">
-              How to prevent C<img src={logo} alt="corona-pic" />
-              ronavirus
-              <br />
-              (COVID-19)
-            </h1>
+      <div id="prevent-header">
+        <div id="heading-box">
+          <h1 id="prevent-heading">
+            How to prevent C<img src={logo} alt="corona-pic" />
+            ronavirus
+            <br />
+            (COVID-19)
+          </h1>
 
-            <h2 id="sub-heading">9 Tips and Strategies</h2>
+          <h2 id="sub-heading">9 Tips and Strategies</h2>
 
-            <div id="content-navigation">
-              <p id="navigation-line">
-                <a href="#tips">Tips</a> | <a href="#importance">Importance</a>{" "}
-                |
-                <a href="#when_to_call_your_doctor">When to call your doctor</a>
-                | <a href="#takeaway">Takeaway</a>
-              </p>
-            </div>
+          <div id="content-navigation">
+            <p id="navigation-line">
+              <a href="#tips">Tips</a> | <a href="#importance">Importance</a> | <a href="#when_to_call_your_doctor">When to call your doctor</a>
+            </p>
           </div>
         </div>
-      </header>
+
+        
+      </div>
 
       <section id="headline-section">
         <div id="content-container" className="headline">
@@ -43,8 +43,7 @@ const prevention = () => {
             for severe acute respiratory syndrome coronavirus 2. An infection
             with this virus can lead to coronavirus disease 19, or COVID-19.
           </p>
-          <br />
-          <p>Read more...</p>
+        
         </div>
 
         <h1 className="prevent-heading" id="steps-heading">
@@ -377,6 +376,8 @@ const prevention = () => {
           </div>
         </div>
       </section>
+
+      <Footer/>
     </>
   );
 };

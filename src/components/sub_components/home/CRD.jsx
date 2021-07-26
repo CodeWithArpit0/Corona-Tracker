@@ -109,7 +109,7 @@ const CRD = (props) => {
                 <button
                   className="flex"
                   id="country-btn"
-                  title="country-button"
+                  title="Countries"
                   onClick={showCountries}
                 >
                   <Globe className="icon" />

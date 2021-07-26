@@ -1,7 +1,7 @@
 import Header from "./Header";
 import CRD from "./CRD";
 import CEC from "./CEC";
-import Footer from "./Footer";
+import Footer from "../footer/footer";
 
 const Home = (props) => {
   return (

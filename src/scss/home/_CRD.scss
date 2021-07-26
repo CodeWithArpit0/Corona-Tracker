@@ -1,28 +1,27 @@
 #all-cases-section {
   @include volume(100%, auto);
   background: #fff;
-  padding: 1em;
   flex-direction: column;
   justify-content: space-around;
 
-  #heading-container {
-    text-align: center;
-    margin-top: 3em;
+#heading-container {
+  text-align: center;
+  margin-top: 3em;
+}
 
-  }
+#main-heading {
+  color: var(--secondry-color);
+}
 
-  #main-heading {
-    color: var(--secondry-color);
-  }
-
-  #cards-container {
+#cards-container {
     @include volume(100%, unset);
-    padding: 1em;
+    padding: 1em .6em;
     justify-content: space-between;
     margin: 3em 0;
+
     #control-card {
-      @include volume(19em, 10em);
-      padding: 1.1em 1em;
+      @include volume(17em, 10em);
+      padding: 1em .8em;
       box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
       border-radius: 3px;
       border: 2px solid;
@@ -73,36 +72,24 @@
       }
 
       #country-list {
-        @include volume(16.8em, 20em);
+        @include volume(15.1em, 20em);
         background: #fff;
         border-radius: 8px;
         box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
         margin-top: 4px;
         display: none;
         position: absolute;
-        padding: 1em 10px;
+        padding: 10px;
         overflow: auto;
         transition: all 0.3s linear ease-in-out;
 
         ul {
-          input {
-            @include volume(100%, 100%);
-            padding: 10px 1em;
-            font-weight: bold;
-            color: rgba(31, 29, 29, 0.5);
-            box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3);
-            outline: none;
-            border: none;
-            font-weight: bold;
-            border-radius: 4px;
-            color: var(--text-color);
-            margin-bottom: 8px;
-          }
 
           li {
             .countryBtn {
-              padding: 10px 8px;
+              padding: 8px;
               cursor: pointer;
+              
               background: transparent;
               box-shadow: none;
               text-align: left;
@@ -119,11 +106,11 @@
     }
 
     #case-container {
-      @include volume(59em, auto);
-      justify-content: space-between;
+      min-width: 50.7em;
+      justify-content: space-around;
 
       .card {
-        @include volume(18em, 10em);
+        @include volume(16em, 10em);
         background-image: linear-gradient(#fff 75%, var(--primary-color) 25%);
         border-radius: 3px;
         box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
@@ -133,7 +120,7 @@
 
         span,
         h1 {
-          font-size: 2.6em;
+          font-size: 2.4em;
           text-shadow: 1px 3px 2px rgba(0, 0, 0, 0.4);
         }
 
@@ -170,45 +157,45 @@
   }
 }
 
-/* iPads (portrait and landscape) ----------- */
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
-  /* Styles */
+// /* iPads (portrait and landscape) ----------- */
+// @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+//   /* Styles */
 
-  #all-cases-section {
-    padding-top: 4em;
+//   #all-cases-section {
+//     padding-top: 4em;
 
-    #cards-container {
-      flex-direction: column;
-      margin-top: 2em;
-      #control-card {
-        @include volume(26em, 12em);
-        padding: 1.5em 1.3em;
+//     #cards-container {
+//       flex-direction: column;
+//       margin-top: 2em;
+//       #control-card {
+//         @include volume(26em, 12em);
+//         padding: 1.5em 1.3em;
 
-        #country-list {
-          width: 23em;
-        }
-      }
+//         #country-list {
+//           width: 23em;
+//         }
+//       }
 
-      #case-container {
-        flex-direction: column;
-        margin-top: 3em;
+//       #case-container {
+//         flex-direction: column;
+//         margin-top: 3em;
 
-        .card {
-          @include volume(26em, 12em);
-          margin-top: 1em;
-          padding: 0 1.3em;
-        }
-      }
-    }
-  }
-}
+//         .card {
+//           @include volume(26em, 12em);
+//           margin-top: 1em;
+//           padding: 0 1.3em;
+//         }
+//       }
+//     }
+//   }
+// }
 
-/* iPads (landscape) ----------- */
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
-  /* Styles */
+// /* iPads (landscape) ----------- */
+// @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+//   /* Styles */
   
-}
+// }
 
-/* iPads (portrait) ----------- */
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
-}
+// /* iPads (portrait) ----------- */
+// @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+// }
