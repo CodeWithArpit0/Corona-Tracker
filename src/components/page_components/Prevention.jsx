@@ -8,7 +8,6 @@ import clean from "../../images/prevention/clean.png";
 import distance from "../../images/prevention/distance.jpg";
 import group from "../../images/prevention/group.png";
 import mask from "../../images/prevention/mask.png";
-import cardsFooter from "../sub_components/footer/footer";
 
 import Footer from "../sub_components/footer/footer";
 
