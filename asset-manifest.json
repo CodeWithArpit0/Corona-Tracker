@@ -1,0 +1,33 @@
+{
+  "files": {
+    "main.css": "/Corona-Tracker/static/css/main.ff6e9153.chunk.css",
+    "main.js": "/Corona-Tracker/static/js/main.b18410d0.chunk.js",
+    "main.js.map": "/Corona-Tracker/static/js/main.b18410d0.chunk.js.map",
+    "runtime-main.js": "/Corona-Tracker/static/js/runtime-main.b055f53b.js",
+    "runtime-main.js.map": "/Corona-Tracker/static/js/runtime-main.b055f53b.js.map",
+    "static/js/2.b65378a7.chunk.js": "/Corona-Tracker/static/js/2.b65378a7.chunk.js",
+    "static/js/2.b65378a7.chunk.js.map": "/Corona-Tracker/static/js/2.b65378a7.chunk.js.map",
+    "index.html": "/Corona-Tracker/index.html",
+    "static/css/main.ff6e9153.chunk.css.map": "/Corona-Tracker/static/css/main.ff6e9153.chunk.css.map",
+    "static/js/2.b65378a7.chunk.js.LICENSE.txt": "/Corona-Tracker/static/js/2.b65378a7.chunk.js.LICENSE.txt",
+    "static/media/check.b92b5a79.svg": "/Corona-Tracker/static/media/check.b92b5a79.svg",
+    "static/media/clean.bf21c7eb.png": "/Corona-Tracker/static/media/clean.bf21c7eb.png",
+    "static/media/cover.03410a87.png": "/Corona-Tracker/static/media/cover.03410a87.png",
+    "static/media/distance.d94e80ed.jpg": "/Corona-Tracker/static/media/distance.d94e80ed.jpg",
+    "static/media/group.b1f7eaef.png": "/Corona-Tracker/static/media/group.b1f7eaef.png",
+    "static/media/hand-shake.835837fb.png": "/Corona-Tracker/static/media/hand-shake.835837fb.png",
+    "static/media/handwash.696f951c.png": "/Corona-Tracker/static/media/handwash.696f951c.png",
+    "static/media/mask.4872a597.png": "/Corona-Tracker/static/media/mask.4872a597.png",
+    "static/media/personal.ddbbbd0c.png": "/Corona-Tracker/static/media/personal.ddbbbd0c.png",
+    "static/media/ps.7fbc7b2a.png": "/Corona-Tracker/static/media/ps.7fbc7b2a.png",
+    "static/media/symptom.58761c77.jpg": "/Corona-Tracker/static/media/symptom.58761c77.jpg",
+    "static/media/touch-face.38b592d8.png": "/Corona-Tracker/static/media/touch-face.38b592d8.png",
+    "static/media/vaccine.50f6aa8c.jpg": "/Corona-Tracker/static/media/vaccine.50f6aa8c.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.b055f53b.js",
+    "static/js/2.b65378a7.chunk.js",
+    "static/css/main.ff6e9153.chunk.css",
+    "static/js/main.b18410d0.chunk.js"
+  ]
+}
